@@ -165,8 +165,8 @@ button {
 .hero-photo {
   position: absolute;
   inset: 0;
-  background: url('living-room.jpg') center 48% / cover no-repeat;
-  filter: brightness(.78);
+  background: url('commercial.jpg') center 52% / cover no-repeat;
+  filter: brightness(.72) saturate(0.9);
 }
 
 .hero-overlay {
@@ -227,7 +227,7 @@ h1 em {
   font-size: 17px;
   line-height: 1.75;
   color: #ddd8d0;
-  max-width: 520px;
+  max-width: 620px;
   margin: 0 0 32px;
 }
 
@@ -236,6 +236,33 @@ h1 em {
   gap: 30px;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.hero-paths {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 18px 0 0;
+}
+
+.hero-path {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 18px;
+  border: 1px solid rgba(234, 196, 106, 0.7);
+  background: rgba(15, 14, 12, 0.52);
+  color: var(--gold-light);
+  font: 800 10px 'Montserrat', sans-serif;
+  letter-spacing: 1.5px;
+  transition: border-color .2s, background .2s, transform .2s;
+}
+
+.hero-path:hover {
+  background: rgba(202, 160, 77, 0.12);
+  border-color: var(--gold-light);
+  transform: translateY(-2px);
 }
 
 .text-link {
@@ -850,6 +877,7 @@ textarea { resize: vertical; min-height: 120px; }
   .hero-bottom { bottom: 22px; flex-direction: column; gap: 10px; }
   .hero-stats { gap: 9px; flex-wrap: wrap; }
   .hero-actions { flex-direction: column; align-items: flex-start; }
+  .hero-paths { margin-top: 14px; }
   h1 { font-size: clamp(55px, 13vw, 86px); }
   .hero p { font-size: 15px; }
   .section { padding: 75px 0; }
